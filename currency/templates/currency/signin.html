@@ -1,0 +1,24 @@
+{% extends 'currency/base.html' %}
+
+{% block content %}
+
+<div class="col-lg-5"></div>
+ <div class="col-lg-5">
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<h3><b><u>Sign-in</u></b></h3>
+ <br>
+ 	<form method="POST">{% csrf_token %}
+ 		{{ form.as_p }}
+ 		<br>
+ 			<button type="submit" style="margin-left:2.5cm" class="btn btn-default"> Sign in</button>
+ 	</form>
+ </div>
+
+
+
+{% endblock %}

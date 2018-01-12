@@ -1,0 +1,31 @@
+{% extends 'currency/base.html' %}
+
+{% block content %}
+<div class="col-lg-5"></div>
+ <div class="col-lg-5">
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<br>
+ 	<h3 style="margin-left: 1cm"><b><u>Conversion</u></b></h3>
+ 	<br>
+ 	<h4 style="margin-right: 4cm"><strong><u>Codes</u>:
+ 	{% for i in codess %}
+ 		{{ i }}
+ 	{% endfor %}
+ </strong></h4>
+ 	<br>
+ 	
+ <br>
+ 	<form method="POST">
+ 		{% csrf_token %}
+ 		{{ form.as_p }}
+ 		<br>
+ 			<button href="{% url 'formpage1' %}" type="submit" style="margin-left: 2cm" class="btn btn-default"> Convert</button>
+ 	</form>
+ </div>
+
+
+
+
+{% endblock %}
